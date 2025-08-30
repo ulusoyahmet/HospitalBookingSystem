@@ -7,6 +7,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalBooking.Domain", "src\HospitalBooking.Domain\HospitalBooking.Domain.csproj", "{B86DB7EC-4EEB-4559-8832-55629D92C150}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalBooking.Infrastructure", "src\HospitalBooking.Infrastructure\HospitalBooking.Infrastructure.csproj", "{497F1544-231C-4FA1-A8A5-9DC274453FCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalBooking.Application", "src\HospitalBooking.Application\HospitalBooking.Application.csproj", "{8507C9E8-91AF-4AF0-B360-03CF199A8A70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalBooking.API", "src\HospitalBooking.API\HospitalBooking.API.csproj", "{CC387117-16F0-4A61-8792-6879D42804AD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,12 +23,27 @@ Global
 		{B86DB7EC-4EEB-4559-8832-55629D92C150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B86DB7EC-4EEB-4559-8832-55629D92C150}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B86DB7EC-4EEB-4559-8832-55629D92C150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{497F1544-231C-4FA1-A8A5-9DC274453FCB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{497F1544-231C-4FA1-A8A5-9DC274453FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{497F1544-231C-4FA1-A8A5-9DC274453FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{497F1544-231C-4FA1-A8A5-9DC274453FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8507C9E8-91AF-4AF0-B360-03CF199A8A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8507C9E8-91AF-4AF0-B360-03CF199A8A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8507C9E8-91AF-4AF0-B360-03CF199A8A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8507C9E8-91AF-4AF0-B360-03CF199A8A70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC387117-16F0-4A61-8792-6879D42804AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC387117-16F0-4A61-8792-6879D42804AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC387117-16F0-4A61-8792-6879D42804AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC387117-16F0-4A61-8792-6879D42804AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B86DB7EC-4EEB-4559-8832-55629D92C150} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{497F1544-231C-4FA1-A8A5-9DC274453FCB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8507C9E8-91AF-4AF0-B360-03CF199A8A70} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CC387117-16F0-4A61-8792-6879D42804AD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {135A9DEC-73DD-4AA8-B422-A08C568BFB0B}
