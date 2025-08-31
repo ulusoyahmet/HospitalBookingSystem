@@ -1,4 +1,5 @@
-﻿using HospitalBooking.Domain.Entities;
+﻿using System.Reflection.Emit;
+using HospitalBooking.Domain.Entities;
 using HospitalBooking.Infrastructure.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -6,9 +7,9 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HospitalBooking.Infrastructure.Persistence;
 
-public class ApplicationDbContext: IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
+public class HospitalDbContext: IdentityDbContext<ApplicationUser, IdentityRole<Guid>, Guid>
 {
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+    public HospitalDbContext(DbContextOptions<HospitalDbContext> options)
         : base(options) { }
 
     public DbSet<Doctor> Doctors { get; set; }
@@ -20,6 +21,7 @@ public class ApplicationDbContext: IdentityDbContext<ApplicationUser, IdentityRo
     {
         base.OnModelCreating(builder);
 
+        builder.ApplyConfigurationsFromAssembly(typeof(HospitalDbContext).Assembly);
         // Configuration Appointment unique index
         builder.Entity<Appointment>(b =>
         {
