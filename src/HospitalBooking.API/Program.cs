@@ -99,9 +99,9 @@ builder.Services.AddSwaggerGen(options =>
             {
                 TokenUrl = new Uri("https://localhost:7063/connect/token", UriKind.Absolute),
                 Scopes = new Dictionary<string, string>
-            {
-                { "api", "Hospital Booking API" }
-            }
+                {
+                    { "api", "Hospital Booking API" }
+                }
             }
         }
     });
