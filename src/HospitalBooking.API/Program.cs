@@ -4,10 +4,27 @@ using HospitalBooking.Infrastructure.Persistence.Seed;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using OpenIddict.Validation.AspNetCore;
+using HospitalBooking.API.Policies;
+using Microsoft.AspNetCore.Authorization;
+using HospitalBooking.API.Policies.Handlers;
+using HospitalBooking.API.Policies.Requirements;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+
+// Add HttpContextAccessor for handlers that need it
+builder.Services.AddHttpContextAccessor();
+
+// Configure authorization policies
+builder.Services.ConfigureAuthorizationPolicies(); // Our extension method
+
+// Register custom handlers
+builder.Services.AddScoped<IAuthorizationHandler, CanEditPatientRecordsHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, WorkingHoursHandler>();
+builder.Services.AddScoped<IAuthorizationHandler, MinimumAgeHandler>();
+
 // 1. DbContext
 builder.Services.AddDbContext<HospitalDbContext>(options =>
 {
